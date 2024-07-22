@@ -67,3 +67,9 @@ console.log ("Al tratar de modificar el valor de una const obtendremos: TypeErro
 
 // 10. Comenta las líneas que produzcan algún tipo de error al ejecutarse
 console.log("Has realizado los primeros ejercicios de JavaScript!")
+
+
+
+
+let variable = undefined
+console.log(variable)

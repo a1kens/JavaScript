@@ -60,5 +60,5 @@ console.log("Es igual: " + var1 + " == " + var2 + " ? ");
  console.log (var1 == var2)
 
 // 10. Comprueba si dos strings tienen la misma longitud
-console.log("var1.length: " + var1.length + " ==  var2.length: " + var2.length)
+console.log("var1.length: " + var1.length + "  ==  var2.length: " + var2.length)
 console.log(var1.length == var2.length)
