@@ -1,3 +1,4 @@
+console.log("Wellcome to #Day 1")
 console.log("Hello, world!"); //Podemos comprobar que funcionan con distintas comillas
 console.log('Hello, world!');
 console.log('Hello, world!');

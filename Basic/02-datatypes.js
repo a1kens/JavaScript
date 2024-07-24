@@ -1,3 +1,4 @@
+console.log("Wellcome to #Day 2")
 // Existen 7 primitivos
 
 //Cadenas de texto (string)
