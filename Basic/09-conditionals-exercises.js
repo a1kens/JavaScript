@@ -145,8 +145,7 @@ switch (language) {
         console.log("Bonjour")
         break;
     default:
-        console.log("Idioma no soportado")
-        break;
+        console.log("Idioma no soportado")        
 }
 
 // 9. Usa un switch para hacer de nuevo el ejercicio 6

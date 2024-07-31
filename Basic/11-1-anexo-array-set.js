@@ -74,3 +74,18 @@ Usa arrays cuando necesitas mantener el orden de los elementos, permitir duplica
 Usa sets cuando necesitas una colección de valores únicos, realizar operaciones de conjuntos o realizar búsquedas rápidas de elementos.
 Al elegir entre arrays y sets, considera las operaciones que necesitas realizar y las propiedades que deben cumplir los elementos en tu colección.
 Esto te ayudará a seleccionar la estructura de datos más adecuada para tu caso de uso. */
+
+
+// Eliminar los repetidos de un array
+let myArray4 = [1, 2, 3, 4, 4, 5];
+let uniqueArray = [...new Set(myArray4)];
+console.log(uniqueArray); // [1, 2, 3, 4, 5]
+
+
+
+
+let uniqueArray2 = myArray4.filter((item, index) => {
+    return myArray4.indexOf(item) === index;
+});
+
+console.log(uniqueArray2); // [1, 2, 3, 4, 5]
