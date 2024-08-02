@@ -112,3 +112,4 @@ myArray.forEach (function(value) {
 })
 
 myArray.forEach((value) => console.log("Ahora con arrow function: " + value))
+
