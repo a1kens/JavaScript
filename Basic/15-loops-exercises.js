@@ -53,6 +53,37 @@ const vocales = 'aeiouAEIOU';
 console.log("La cadena de texto insertada contiene: " + contador + " vocales");
 
 
+
+// let cadeTexto = "Probando a contar vocales MAYUSCULAS o MINUSCULAS, y desglosado"
+// let a = 0
+// let e = 0
+// let i = 0
+// let o = 0
+// let u = 0
+
+// cadeTexto = cadeTexto.toLowerCase()
+// for (let valor of cadeTexto) {
+//     if (valor == "a") {
+//         a += 1
+//     } else if (valor == "e") {
+//         e += 1
+//     } else if (valor == "i") {
+//         i += 1
+//     } else if (valor == "o") {
+//         o += 1
+//     } else if ( valor == "u") {
+//         u += 1
+//     }
+// }
+// console.log('Numero de letras a: ', a)
+// console.log('Numero de letras e: ', e)
+// console.log('Numero de letras i: ', i)
+// console.log('Numero de letras o: ', o)
+// console.log('Numero de letras u: ', u)
+// console.log('Total: ', a + e + i + o + u)
+
+
+
 // 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto
 
 let numeros = [2, 3, 4, 5, 6];
@@ -101,10 +132,22 @@ let numerosMayores = []
 
 for (let i = 0; i < numerosAll.length; i++) {
     if (numerosAll[i] > 10) {
-        numerosMayores.push(numerosAll[i]);
+        numerosMayores.push(numerosAll[i])
 
     }
 }
 
 console.log("Estos son todos los números del array: " + numerosAll)
 console.log("Estos son los números mayores a 10: " + numerosMayores)
+
+
+
+// numeros = [1, 2, 3, 4, 8, 12, 14]
+
+// for (let i = 0; i < numeros.length; i++) {     
+//      let mayores= numeros.filter(numero => numero > 10)  
+//       console.log(mayores)
+
+// }
+
+

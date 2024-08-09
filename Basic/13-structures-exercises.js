@@ -84,9 +84,23 @@ myMap = new Map ([
 
 console.log(myMap) 
 
-
+console.log("Se ha almacenado myMap: " + JSON.stringify([...myMap.entries()]));
 // myMap.set("fruits", mySet);
 // console.log(myMap.set("fruits", mySet)) // lanzando directamente
 // console.log(myMap); // Mostrar contenido del map
 
 
+
+console.log("Haciendo Pruebas ")
+// const vocales = 'aeiouAEIOUáéíóúÁÉÍÓÚüÜ';
+const texto = "Hola, como estas?";
+let contador = 0;
+const vocales = 'aeiouAEIOU';
+
+for (const letra of texto) { 
+    if (vocales.includes(letra)) {
+        contador++;
+    }
+}
+//   console.log("example");  
+console.log("La cadena de texto insertada contiene: " + contador + " vocales");
