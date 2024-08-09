@@ -32,6 +32,7 @@ console.log(myValue4) // undefined - no contiene más valores
 // Sintaxis arrays con valores predeterminados
 
  let [myValue5, myValue6, myValue7, myValue8, myValue9= 0] = myArray  // le hemos dado valor predeterminado al myValue9 = 0
+ console.log("Prueba dar valor predeterminado a un valur del array")
 console.log(myValue5)
 console.log(myValue6)
 console.log(myValue7)
