@@ -1,8 +1,3 @@
-/*
-Clase 5 en vídeo | 07/08/2024
-Objetos, desestructuración, propagación y clases
-https://www.twitch.tv/videos/2218300512?t=00h17m10s
-*/
 
 // Clases
 
