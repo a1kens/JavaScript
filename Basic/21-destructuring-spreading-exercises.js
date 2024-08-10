@@ -117,3 +117,21 @@ let combined2 = { // crea un nuevo objeto que combina las propiedades de "stats"
 
 
 console.log(combined2);
+
+
+
+let perro = {
+    type: "husky",
+    size: "big",
+    color: "black & white",
+    from: { 
+        name: "Scandinavia",
+        city: "pepito",
+    }
+}
+
+let { type, from : { name} } = perro;  // Desestructuración del objeto
+
+
+console.log(type);  
+console.log(name);  
