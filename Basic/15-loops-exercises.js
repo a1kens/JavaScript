@@ -106,11 +106,13 @@ for (let i = 1; i <= 10; i++) {
 // 8. Usa un bucle para invertir una cadena de texto
 
 let cadena = "Hello, World!";
-
+let cadenaInvertida = []
 for (let i = cadena.length - 1; i >= 0; i--) {
-    console.log(cadena[i]);
+    // console.log(cadena[i]);
+    cadenaInvertida += cadena[i]
 }
 
+console.log(cadenaInvertida)
 
 // 9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
 console.log('Primeros 10 números de la secuencia de Fibonacci')
