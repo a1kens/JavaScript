@@ -153,3 +153,29 @@ console.log("Estos son los números mayores a 10: " + numerosMayores)
 // }
 
 
+// BONUS: Reto de FreecodeCamp
+// trata de hacer una funcion que reciba un numero y devuelva la suma de todos los numeros pares de fibonucci
+// menores o iguales al numero de entrada
+
+function fiboEvenSum(n) {
+  if ( n === 1) {return 0}
+  let r = 2
+  let a = [1, 2];
+  let la = 0;
+  let arrayItems = [];
+  let t = true;
+  do {
+    la = a[0] + a[1];
+    t ? (a[0] = la) : (a[1] = la);
+    t = !t;
+    arrayItems.push(la);
+  } while (la <= n);
+  arrayItems.pop()
+  arrayItems.forEach((e)=> {
+    let es = e/2
+    if(!es.toString().includes(".")){
+      r = r + e
+    }
+  })
+  return r;
+}
