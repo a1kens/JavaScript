@@ -13,8 +13,8 @@ class Person {
 
 // Sintaxis
 
-let person = new Person("Brais", 37, "MoureDev")
-let person2 = new Person("Brais", 37, "MoureDev")
+let person = new Person("Juanma", 39, "aikens")
+let person2 = new Person("Juanma", 39, "aikens")
 
 console.log(person)
 console.log(person2)
@@ -33,7 +33,7 @@ class DefaultPerson {
 
 }
 
-let person3 = new DefaultPerson("Brais", 37)
+let person3 = new DefaultPerson("Juanma", 39)
 
 console.log(person3)
 
@@ -42,7 +42,7 @@ console.log(person3)
 console.log(person3.alias)
 console.log(person3["alias"])
 
-person3.alias = "MoureDev"
+person3.alias = "aikens"
 
 console.log(person3.alias)
 
@@ -62,7 +62,7 @@ class PersonWithMethod {
 
 }
 
-let person4 = new PersonWithMethod("Brais", 37, "MoureDev")
+let person4 = new PersonWithMethod("Juanma", 39, "aikens")
 person4.walk()
 
 // Propiedades privadas
@@ -84,7 +84,7 @@ class PrivatePerson {
 
 }
 
-let person5 = new PrivatePerson("Brais", 37, "MoureDev", "IBAN123456789")
+let person5 = new PrivatePerson("Juanma", 39, "aikens", "IBAN123456789")
 
 // No podemos acceder
 // console.log(person5.bank) 
