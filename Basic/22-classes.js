@@ -118,9 +118,11 @@ class GetSetPerson {
 
 }
 
-person6 = new GetSetPerson("Brais", 37, "MoureDev", "IBAN123456789")
+person6 = new GetSetPerson("Juanma", 39, "aikens", "IBAN123456789")
 
 console.log(person6)
 console.log(person6.name)
 
 person6.bank = "new IBAN123456789"
+
+
