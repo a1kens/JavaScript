@@ -114,4 +114,5 @@ console.log(person5)
 console.log(typeof person5) // Ambos son objetos - creados de distinta forma
 console.log(typeof person4)
 
-// 
+
+//  
