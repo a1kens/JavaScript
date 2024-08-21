@@ -43,8 +43,8 @@ console.log(mensaje);
 let texto = "Este es un ejemplo de texto con espacios en blanco";
 
 console.log(texto);
-// Reemplazar espacios en blanco por guiones usando replace y una expresión regular
-let textoConGuiones = texto.replace(/\s/g, "-");
+
+let textoConGuiones = texto.replace(/\s/g, "-"); // Reemplazar espacios en blanco por guiones usando replace y una expresión regular
 
 console.log(textoConGuiones);
 
