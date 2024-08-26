@@ -124,7 +124,7 @@ function Login(pwd) {
     }
 
     // Verificar si la contraseña es demasiado larga
-    if (pwd.length >= 12) {
+    if (pwd.length > 12) {
       throw new PasswordTooLongError("La contraseña es demasiado larga. No debe exceder los 12 caracteres.");
     }
 
@@ -297,7 +297,7 @@ function realizarTareaConReintentos(tarea, maxReintentos = 10) {
       }
     }
 
-    intentar(); // Iniciar el primer intento
+    intentar(); 
   });
 }
 
