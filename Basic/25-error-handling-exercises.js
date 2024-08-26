@@ -153,7 +153,6 @@ Login("12345678"); // Este será aceptado porque cumple con los requisitos
 // 7. Captura varias excepciones en un mismo try-catch
 
 
-// Excepción personalizada para tipo de dato inválido
 class InvalidPasswordTypeError extends Error {
   constructor(message) {
     super(message);
