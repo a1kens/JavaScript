@@ -118,11 +118,77 @@ class GetSetPerson {
 
 }
 
-person6 = new GetSetPerson("Juanma", 39, "aikens", "IBAN123456789")
+let person6 = new GetSetPerson("Juanma", 39, "aikens", "IBAN123456789")
 
 console.log(person6)
 console.log(person6.name)
 
 person6.bank = "new IBAN123456789"
 
+
+// Definir clase de tipo Animal - función sound()
+class Animal {
+
+    constructor(name) {
+        this.name = name
+    }
+
+    sound () {
+        console.log("Emite un sonido genérico")
+    }
+}
+
+
+// Parte de herencia - heredando propiedades y comportamientos del "padre"
+class Dog extends Animal {
+
+    sound() {        
+        // super.sound() // llama al sound() de la clase padre
+        console.log("Guau Guau")
+    }
+
+    run() {
+        console.log("El perro corre")
+    }
+}
+
+
+class Fish extends Animal {
+
+    constructor(name, size) {
+        super(name);  // llamamos a la clase de la que extiende - heredamos propiedad/ comportamiento del padre 
+        this.size = size;
+    }
+
+    swim() {
+        console.log("El pez nada")
+    }
+
+}
+
+
+let myDog = new Dog("Lluvia")
+myDog.run()
+myDog.sound()
+
+
+let myFish = new Fish("aikensFish", "small")
+myFish.swim()
+myFish.sound()
+
+// console.log(myFish.name)
+
+
+
+// Métodos estáticos 
+
+class MathOperations { 
+
+    static sum(a, b) {
+        return a + b
+    }
+}
+
+let myClass = new MathOperations()
+console.log(MathOperations.sum(5, 10)) // llamamos a la clase y sin instanciarla tendremos la operación - podemos llamar a esta función en la clase misma, sin instanciar.
 
