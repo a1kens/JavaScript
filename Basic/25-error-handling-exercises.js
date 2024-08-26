@@ -199,7 +199,7 @@ function Login2(pwd) {
 
 console.log("7. Captura varias excepciones en un mismo try-catch");
 
-// Estos ejemplos muestran errores específicos de longitud y tipo
+
 Login2(12345);          // Lanzará InvalidPasswordTypeError
 Login2("12345");        // Lanzará PasswordTooShortError
 Login2("1234567890123"); // Lanzará PasswordTooLongError 
@@ -241,11 +241,88 @@ console.log("Proceso de conversión terminado.");
 
 // 9. Crea una función que verifique si un objeto tiene una propiedad específica y lance una excepción personalizada
 
+
+// 1. Definir una excepción personalizada
+class PropertyNotFoundError extends Error {
+  constructor(property) {
+    super(`La propiedad '${property}' no se encontró en el objeto.`);
+    this.name = "PropertyNotFoundError";
+  }
+}
+
+// 2. Crear la función para verificar la propiedad
+function verificarPropiedad(objeto, propiedad) {
+  try {
+    if (!objeto.hasOwnProperty(propiedad)) {
+      throw new PropertyNotFoundError(propiedad); // Lanzar la excepción personalizada si la propiedad no existe
+    }
+    console.log(`La propiedad '${propiedad}' existe en el objeto.`);
+  } catch (error) {
+    console.error(`${error.name}: ${error.message}`);
+  }
+}
+
+// 3. Crear un objeto de ejemplo
+const ejemplo = {
+  nombre: "Juan",
+  edad: 30,
+};
+
+// 4. Verificar propiedades
+verificarPropiedad(ejemplo, "nombre");  // Propiedad existente
+verificarPropiedad(ejemplo, "direccion");  // Propiedad inexistente
+
+
+
+
 // 10. Crea una función que realice reintentos en caso de error hasta un máximo de 10
 
+function realizarTareaConReintentos(tarea, maxReintentos = 10) {
+  let intentos = 0;
+
+  return new Promise((resolve, reject) => {
+    function intentar() {
+      try {
+        intentos++;
+        console.log(`Intento número: ${intentos}`);
+        const resultado = tarea(); // Ejecutar la tarea
+        resolve(resultado); // Si la tarea tiene éxito, resolvemos la promesa
+      } catch (error) {
+        if (intentos >= maxReintentos) {
+          reject(`Error después de ${maxReintentos} intentos: ${error.message}`); // Si se alcanza el número máximo de reintentos, rechazamos la promesa
+        } else {
+          console.warn(`Error: ${error.message}. Reintentando...`); // Si hay un error, intentamos nuevamente
+          setTimeout(intentar, 1000); // Esperamos un segundo antes de reintentar
+        }
+      }
+    }
+
+    intentar(); // Iniciar el primer intento
+  });
+}
+
+// Ejemplo de uso:
+const tarea = () => {
+  // Simulamos una tarea que falla el 70% de las veces
+  if (Math.random() > 0.3) {
+    throw new Error("Tarea fallida");
+  }
+  return "Tarea completada con éxito";
+};
+
+realizarTareaConReintentos(tarea)
+  .then((resultado) => {
+    console.log(resultado); // Mostrar el resultado si la tarea es exitosa
+  })
+  .catch((error) => {
+    console.error(error); // Mostrar el error si no se pudo completar la tarea después de los reintentos
+  });
 
 
 
+
+
+// Otra cosa mariposa - practicando cosillas random
 
 // const obj = { name: "Juanma", age: 39 }
 // // const { name, age = 30 } = obj
