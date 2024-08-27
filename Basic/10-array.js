@@ -98,6 +98,33 @@ console.log(arr.filter (num => num > 2)) // nos devolverá los números del arra
 
 console.log(arr.find(num => num > 2))
 
-// map (callback)
+// map (callback) - método de arrays en JavaScript que crea un nuevo array con los resultados de aplicar una función a cada elemento del array original.
 
-console.log(arr.map(num => num * 2)) // el map recorrerá el array [1, 2, 3, 4] y multiplicará cada elemento * 2 
+console.log(arr.map(num => num * 2)) // el map recorrerá el array [1, 2, 3, 4] y multiplicará cada elemento * 2 devolviendo [ 2, 4, 6, 8 ]
+
+let miArray = ["Lluvia", "Alby", "Juana", "Bimba"]
+
+miArray.map((elemento, index) => {
+  console.log(elemento);
+  return elemento; // `map` requiere que devuelvas un valor, pero puedes devolver el mismo elemento
+});
+
+// for (let i = 0; i < miArray.length; i++) {
+//     console.log(miArray[i]) // Irá recorriendo el array con el valor "i"
+// }
+
+
+
+
+
+const errorHandler = ( error, request, response , next) => {
+    console.error(error.message)
+
+    if (error.name === 'CastError') {
+        return response.status(400).send({ error: 'malformatted id' })
+    }else if(error.name === 'ValidationError') {
+        return response.status(400).send({ error: error.message })
+    }
+
+    next(error)
+}
