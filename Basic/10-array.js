@@ -81,6 +81,23 @@ myArray.splice (1, 3) // Elimina desde la posición myArray[1] a myArray[3]
 console.log(myArray)
 
 
+// concat (array1 , array2)
+let arr1 = [1, 2]
+let arr2 = [3, 4]
+
+console.log(arr1.concat(arr2)) // nos devolverá los dos arrays fusionados
+
+// filter (callback)
+
+let arr = [1, 2, 3, 4]
+
+console.log(arr.filter (num => num > 2)) // nos devolverá los números del array que sean mayor que 2
 
 
+// find (callback) - devuelve el primer elemento en el array que cumple con la condición especificada en el callback.
 
+console.log(arr.find(num => num > 2))
+
+// map (callback)
+
+console.log(arr.map(num => num * 2)) // el map recorrerá el array [1, 2, 3, 4] y multiplicará cada elemento * 2 
