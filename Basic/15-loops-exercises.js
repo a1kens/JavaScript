@@ -114,6 +114,12 @@ for (let i = cadena.length - 1; i >= 0; i--) {
 
 console.log(cadenaInvertida)
 
+// let daysOfWeek = [ "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+// console.log(daysOfWeek)
+// daysOfWeek.reverse();
+// console.log(daysOfWeek)
+
+
 // 9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
 console.log('Primeros 10 números de la secuencia de Fibonacci')
 
@@ -124,6 +130,20 @@ for (let i = 2; i < 10; i++) {
 }
 
 console.log(fibonacci);
+
+
+
+// let a = 0
+// let b = 1
+
+// for (let i = 0; i < 10; i++){
+//     console.log(a)
+//     let Fibonacci = a + b
+//     a = b       
+//     b = Fibonacci   
+
+//     }
+
 
 
 
