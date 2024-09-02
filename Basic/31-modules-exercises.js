@@ -194,17 +194,22 @@ console.log(meses)
 let valorRecuperado = meses.get("nueva llave"); // Obtener el valor asociado a la clave "nueva llave"
 console.log(valorRecuperado)
 
-console.log("Los primeros 10 números de Fibonacci")
-
-    let a = 0
-    let b = 1
-
-    for (let i = 0; i <= 10; i++){
-        console.log(a)
-        let Fibonacci = a + b
-        a = b       
-         
-        b = Fibonacci            
-    }
 
 
+let nombres = ["victor", "manuel", "luis", "javier"]
+// console.log(nombres.length)
+// console.log(nombres[4])
+let n = -1
+
+do {
+    n++
+    console.log(nombres[n])
+}
+
+while (n < nombres.length - 1)
+
+
+for (let n = 0; n < nombres.length; n++) {
+    console.log(nombres[n]);
+}
+ 

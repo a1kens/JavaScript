@@ -53,6 +53,9 @@ const vocales = 'aeiouAEIOU';
 console.log("La cadena de texto insertada contiene: " + contador + " vocales");
 
 
+let animales = ["perro", "gato", "mono", "pinguino"]
+
+animales.forEach(item)
 
 // let cadeTexto = "Probando a contar vocales MAYUSCULAS o MINUSCULAS, y desglosado"
 // let a = 0
