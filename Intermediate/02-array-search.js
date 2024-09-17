@@ -59,3 +59,28 @@ Los índices en los arrays de JavaScript comienzan en 0.
 Por lo tanto, console.log(peleIndex) imprime el valor 2 porque 'Pele' se encuentra en el tercer lugar del array, que corresponde al índice 2 (contando desde 0).
 
 */
+
+
+
+
+
+
+/* Ordenación
+*/
+
+// const num = [1, 2, 3, 4, 5, 6]
+const numD = [1, 4, 6, 3, 2, 4];
+const numOrder = [1, 4, 6, 3, 2, 5];
+
+
+numOrder.sort((a, b) => a - b) // Orden ascendente
+console.log(`Ordenando el numOrder en orden ascendente: `, numOrder);
+
+numOrder.sort((a,b) => b - a) // Orden descendente
+console.log(`Ordenando el numOrder en orden descendente: `, numOrder);
+
+
+// const numD = [1, 4, 6, 3, 2, 4];
+numD.sort((a, b) => a - b);
+// console.log(numD);  // [1, 2, 3, 4, 4, 6]
+//  console.log(`Ordenando el numD: `, numD);

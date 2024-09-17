@@ -1,55 +1,5 @@
-const numbers = [1, 2, 3]
-const [x, y, z] = numbers
-// Guess the Outuput?
-console.log(x, y, z) // 123  - La desestructuración de arrays te permite extraer valores de un array y asignarlos a variables de forma más concisa
 
-
-
-
-// Ordenación
-const num = [1, 2, 3, 4, 5, 6]
-
-
-const numD = [1, 4, 6, 3, 2, 4];
-const numOrder = [1, 4, 6, 3, 2, 5];
-
-
-numOrder.sort((a, b) => a - b) // Orden ascendente
-console.log(`Ordenando el numOrder en orden ascendente: `, numOrder);
-
-numOrder.sort((a,b) => b - a) // Orden descendente
-console.log(`Ordenando el numOrder en orden descendente: `, numOrder);
-
-
-
-// const numD = [1, 4, 6, 3, 2, 4];
-numD.sort((a, b) => a - b);
-// console.log(numD);  // [1, 2, 3, 4, 4, 6]
-//  console.log(`Ordenando el numD: `, numD);
-
-
-// Loop  for, While - Cual utilizar
-
-
-// Manipulación de Arrays - Métodos de JavaScript(agregar, eliminar, split..)
-
-
-
-// Todos los algoritmos tienen una forma para poderse desarrollar
-
-
-/*
-Complejidad -
-Recursos que nuestro ordenador está consumiendo
-Codigo que sea escalable y se pueda mantener en el tiempo, tiene que ser legible
-Complejidad Temporal: número de operaciones (operaciones math., comparaciones, funciones...etc)
-Complejidad Espacial: Memoria necesaria
-Notación Big O: Que tan rápido es
-
-
-*/
-
-// Creamos un array actr
+// Creamos un array actresses que contiene objetos, cada objeto representa un actriz con dos propiedades: name (nombre) y age (edad).
 const actresses = [
     { name: "Brandi", age: 30 }, 
     { name: "Alex", age: 25 },
@@ -57,7 +7,60 @@ const actresses = [
     { name: "Jordan", age: 35 },
     { name: "Morgan", age: 22 },
 ];
+// Uso del método some:  El método .some() retorna true si al menos un elemento del array cumple la condición especificada dentro de la función de callback.
+const hasJordan = actresses.some((actresses) => actresses.name === "Jordan");
+/*
+En este caso, la función de callback está revisando cada objeto del array y verificando si la propiedad name es igual a "Jordan".
+Si encuentra algún objeto con ese nombre, el método some() devolverá true.
 
-const hasJordan = actresses.some((actresses) => actresses.name === "Jordan")
 
-console.log("hasJordan:", hasJordan)
+*/
+console.log("hasJordan:", hasJordan);
+
+
+
+const buscador = 'avion'
+const almacen = 'Avión'
+// buscador.localeCompare(almacen)
+console.log(buscador.localeCompare(almacen)); // Ouput: -1
+
+/* El método localeCompare() en JavaScript se utiliza para comparar dos cadenas en función del idioma o configuración regional especificada.
+ El valor de retorno de localeCompare() puede ser:
+
+-1: si la primera cadena (en este caso, 'buscador') es "menor" que la segunda cadena ('almacen') según el orden lexicográfico de la configuración regional.
+0: si ambas cadenas son equivalentes.
+1: si la primera cadena es "mayor" que la segunda cadena.
+*/
+
+console.log(buscador.localeCompare(almacen, undefined , { sensitivity: 'base'})); // Output: 0
+// sensitivity: 'base' ignora tanto las diferencias entre mayúsculas y minúsculas como los acentos.
+/*
+"base": "Ignora mayúsculas y acentos."
+"accent": "Ignora mayúsculas, pero diferencia acentos."
+"case": "Ignora acentos, pero diferencia mayúsculas."
+"variant": "Distingue todo (mayúsculas, acentos y variantes)."
+*/
+
+
+// Crea una función que muestre la hora y fecha actual cada segundo
+function showDate() {
+    setInterval(() => {
+        let time = new Date();
+        console.log(time.toLocaleString()); 
+    }, 1000);
+}
+
+showDate()
+
+
+
+
+
+
+
+
+
+
+
+
+
