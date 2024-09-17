@@ -1,4 +1,4 @@
-// 
+// Alternatives to "if...else" statements in JavaScript
 
 // Ternary operator - Comprubea condición y ejecuta la primera expresión si la condición es "true" sino ejecutará la segunda expresión
 const isLoggedIn = false

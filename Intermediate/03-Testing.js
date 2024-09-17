@@ -48,3 +48,16 @@ Notación Big O: Que tan rápido es
 
 
 */
+
+// Creamos un array actr
+const actresses = [
+    { name: "Brandi", age: 30 }, 
+    { name: "Alex", age: 25 },
+    { name: "Taylor", age: 27 },
+    { name: "Jordan", age: 35 },
+    { name: "Morgan", age: 22 },
+];
+
+const hasJordan = actresses.some((actresses) => actresses.name === "Jordan")
+
+console.log("hasJordan:", hasJordan)
