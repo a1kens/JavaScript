@@ -94,7 +94,7 @@ console.log(array3)
 let array4 = [...array1, ...array2]; // utilizamos el Spread Operator
 console.log(array4)
 
-// 9. Find te Largest Element in an Array
+// 9. Encuentra el elemento más largo del array
 let arr = ['perro', 'perro', 'gato', 'zorro', 'jirafa']
 let max ="" // una cadena vacía, de ese modo cualquier elemento del array que tenga longitud mayor sea considerado
 
@@ -105,7 +105,8 @@ for (let i=0; i < arr.length; i++) {
 }
 console.log(max)
 
-// 10. Remove Duplicates from an Array
+
+// 10. Elimina los duplicados de un array
 let mySet = new Set(arr) // Convertimos el array en un Set y con ello eliminamos los duplicados
 console.log(mySet)
 
