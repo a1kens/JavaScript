@@ -31,3 +31,9 @@ En tu código, la condición del bucle es i <= num.length. Esto significa que en
 intentas acceder a num[5], pero el índice 5 no existe en el array. Esto da como resultado undefined.
 Cuando intentas multiplicar product por undefined, el resultado es NaN.
 */
+
+function sum(a, b = a) {
+    return a + b;
+}
+
+console.log(sum(1))
